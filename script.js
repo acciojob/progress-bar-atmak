@@ -40,3 +40,4 @@ function checkButtonStatus() {
 }
 
 checkButtonStatus(); // Initial check
+document.getElementById('circle-1').classList.add('active');
