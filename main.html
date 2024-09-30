@@ -5,34 +5,17 @@
 <head>
 	<link rel="stylesheet" href="styles.css">
 </head>
+</body>
+	<div id="progress-bar">
+    <div class="circle" id="circle-1">1</div>
+    <div class="circle" id="circle-2">2</div>
+    <div class="circle" id="circle-3">3</div>
+    <div class="circle" id="circle-4">4</div>
+    <div class="circle" id="circle-5">5</div>
+</div>
 
-<body>
-	let activeCircle = 1;
-
-document.getElementById('next').addEventListener('click', function() {
-    if(activeCircle < 5) {
-        activeCircle++;
-        updateProgressBar();
-    }
-});
-
-document.getElementById('prev').addEventListener('click', function() {
-    if(activeCircle > 1) {
-        activeCircle--;
-        updateProgressBar();
-    }
-});
-
-function updateProgressBar() {
-    for(let i=1; i<=5; i++) {
-        let circle = document.getElementById('circle-' + i);
-        if(i <= activeCircle) {
-            circle.classList.add('active');
-        } else {
-            circle.classList.remove('active');
-        }
-    }
-}
+<button id="prev" disabled>Prev</button>
+<button id="next">Next</button>
 
 	<script type="text/javascript" src="./script.js">
 </script>
