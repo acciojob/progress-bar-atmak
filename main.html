@@ -7,8 +7,34 @@
 </head>
 
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
+	let activeCircle = 1;
+
+document.getElementById('next').addEventListener('click', function() {
+    if(activeCircle < 5) {
+        activeCircle++;
+        updateProgressBar();
+    }
+});
+
+document.getElementById('prev').addEventListener('click', function() {
+    if(activeCircle > 1) {
+        activeCircle--;
+        updateProgressBar();
+    }
+});
+
+function updateProgressBar() {
+    for(let i=1; i<=5; i++) {
+        let circle = document.getElementById('circle-' + i);
+        if(i <= activeCircle) {
+            circle.classList.add('active');
+        } else {
+            circle.classList.remove('active');
+        }
+    }
+}
+
+	<script type="text/javascript" src="./script.js">
 </script>
 
 </body>
